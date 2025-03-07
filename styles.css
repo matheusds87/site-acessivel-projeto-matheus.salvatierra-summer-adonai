@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: #eaee10;
+    --laranja-claro:rgb(198, 255, 42);
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #06b9f0;
+    --alto-contraste-link: #7f08e0;
 }
 
 body {
@@ -10,9 +13,8 @@ body {
     font-family: 'Montserrat';
 }
 
-
 header {
-    background-color: #1a1919;
+    background-color: #1606ee;
 }
 
 
@@ -22,7 +24,7 @@ section {
 
 
 .nav-link {
-    color: #b1a007;
+    color: #d40d0d;
     font-weight: 600;
 }
 
@@ -62,9 +64,7 @@ section {
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
 
 }
@@ -103,7 +103,7 @@ h2 {
 }
 
 #galeria {
-    background-color: #726c6c;
+    background-color: #fa0808;
 
 }
 
@@ -121,7 +121,7 @@ h2 {
 }
 
 .formulario {
-    background-color: #726c6c;
+    background-color: #240999;
     padding: 2rem;
     /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
@@ -132,12 +132,69 @@ h2 {
 }
 
 .formulario button {
-    background-color: #4a10eb;
+    background-color: #0bf199;
     border: none;
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: #838082;
+    background-color: #f80780;
+}
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
+}
+
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+.alto-contraste .fundo-galeria {
+    background: none;
 }
